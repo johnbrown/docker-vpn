@@ -1,13 +1,14 @@
-FROM lsiobase/alpine:3.5
-MAINTAINER aptalca
+FROM ubuntu:16.04
+
+ARG DEBIAN_FRONTEND="noninteractive"
+ENV TERM="xterm" LANG="C.UTF-8" LC_ALL="C.UTF-8"
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL build_version="Ubuntu-16.04 version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
-# environment settings
-ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
+ENTRYPOINT ["/init"]
 
 # install packages
 RUN \
@@ -15,4 +16,4 @@ RUN \
 	curl
 
 # add local files
-COPY root/ /
+#COPY root/ /
