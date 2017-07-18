@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+    <Date>2017-07-17</Date>
+    <Beta>True</Beta>
+    <Category>Vpn</Category>
+    <Name>Vpn</Name>
+    <Changes>
+
+    </Changes>
+    <Overview>
+
+    </Overview>
+    <Description>
+    </Description>
+    <Registry></Registry>
+    <GitHub>https://github.com/johnbrown/docker-vpn</GitHub>
+    <Repository>limetech/plex</Repository>
+    <Support></Support>
+    <BindTime>true</BindTime>
+    <Privileged>true</Privileged>
+    <Networking>
+        <Mode>host</Mode>
+        <Publish/>
+    </Networking>
+    <Environment/>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/vpn</HostDir>
+            <ContainerDir>/mnt/vpn</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <WebUI></WebUI>
+    <Banner></Banner>
+    <Icon></Icon>
+</Containers>
